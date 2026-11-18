@@ -1,96 +1,136 @@
 
 
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Bansi Rajak | Portfolio</title>
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: #080b14;
-    color: white;
-    font-family: Arial, sans-serif;
+  background: #080b10;
+  color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
 header {
-    padding: 25px;
-    text-align: center;
-    background: #111827;
-    border-bottom: 2px solid #00ff99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #111820;
+  border-bottom: 1px solid #00ff88;
 }
 
-header h2 {
-    color: #00ff99;
+.logo {
+  color: #00ff88;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 12px;
+  font-size: 13px;
 }
 
 .hero {
-    text-align: center;
-    padding: 70px 20px;
+  text-align: center;
+  padding: 65px 20px;
 }
 
 .avatar {
-    font-size: 80px;
-    margin-bottom: 20px;
+  font-size: 85px;
+  margin-bottom: 15px;
 }
 
 .hero h1 {
-    font-size: 38px;
-    color: #00ff99;
-    margin-bottom: 15px;
+  font-size: 38px;
+  color: #00ff88;
 }
 
 .hero h3 {
-    color: #aaa;
-    margin-bottom: 20px;
+  color: #aaa;
+  margin: 10px;
 }
 
 .hero p {
-    color: #ccc;
-    line-height: 1.7;
+  color: #ccc;
+  margin: 15px 0 25px;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 30px;
-    background: #00ff99;
-    color: #080b14;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
+  display: inline-block;
+  background: #00ff88;
+  color: #080b10;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 section {
-    margin: 25px;
-    padding: 30px 20px;
-    background: #111827;
-    border-radius: 15px;
-    border: 1px solid #263449;
-    text-align: center;
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 25px;
+  background: #111820;
+  border: 1px solid #263a35;
+  border-radius: 15px;
+  width: 90%;
 }
 
-section h2 {
-    color: #00ff99;
-    margin-bottom: 20px;
+h2 {
+  color: #00ff88;
+  margin-bottom: 15px;
 }
 
-section p {
-    color: #ccc;
-    line-height: 1.8;
+.skill {
+  display: inline-block;
+  background: #202d2b;
+  color: #00ff88;
+  padding: 10px 16px;
+  margin: 6px;
+  border-radius: 7px;
+}
+
+.project {
+  background: #1a2429;
+  padding: 18px;
+  border-radius: 10px;
+  margin-top: 12px;
 }
 
 footer {
-    text-align: center;
-    padding: 25px;
-    color: #888;
+  text-align: center;
+  padding: 25px;
+  color: #888;
+  border-top: 1px solid #263a35;
+}
+
+footer span {
+  color: #00ff88;
+}
+
+@media(max-width: 500px) {
+  nav a {
+    margin-left: 5px;
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
 }
 </style>
 </head>
@@ -98,46 +138,67 @@ footer {
 <body>
 
 <header>
-    <h2>BANSI RAJAK</h2>
-    <p>My Personal Portfolio</p>
+  <div class="logo">BANSI.</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+  </nav>
 </header>
 
 <div class="hero">
-    <div class="avatar">👨‍💻</div>
-    <h1>BANSI RAJAK</h1>
-    <h3>Future Web Developer</h3>
-    <p>
-        Hello! Welcome to my personal website.
-        I am learning HTML, CSS, JavaScript and AI.
-    </p>
-    <a href="mailto:your-email@example.com" class="btn">
-        Contact Me
-    </a>
+  <div class="avatar">👨‍💻</div>
+  <h1>BANSI RAJAK</h1>
+  <h3>Future Web Developer</h3>
+  <p>Hello! Welcome to my personal website.</p>
+  <p>I am a student learning HTML, CSS, JavaScript and AI.</p>
+  <a href="#contact" class="btn">Contact Me</a>
 </div>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        I am Bansi Rajak.
-        I am a student and AI learner.
-        My dream is to become a professional Web Developer.
-    </p>
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Hello! My name is Bansi Rajak.
+    I am a student and an AI learner.
+    I love learning new technologies
+    and building creative websites.
+    My dream is to become a Web Developer.
+  </p>
 </section>
 
-<section>
-    <h2>My Skills</h2>
-    <p>HTML | CSS | JavaScript | AI</p>
+<section id="skills">
+  <h2>My Skills</h2>
+  <span class="skill">HTML</span>
+  <span class="skill">CSS</span>
+  <span class="skill">JavaScript</span>
+  <span class="skill">AI Learning</span>
 </section>
 
-<section>
-    <h2>My Goal</h2>
-    <p>Learn Technology, Build Projects and Create My Future.</p>
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="project">
+    <h3>Personal Portfolio</h3>
+    <p>My first personal website made using HTML and CSS.</p>
+  </div>
+  <div class="project">
+    <h3>More Coming Soon</h3>
+    <p>I am learning and building new projects.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Thanks for visiting my website!</p>
+  <a class="btn" href="mailto:YOUR_EMAIL@example.com">
+    Send Email
+  </a>
 </section>
 
 <footer>
-    © 2026 Bansi Rajak | All Rights Reserved
+  <p>Made with ❤️ by <span>Bansi Rajak</span></p>
+  <p>© 2026 All Rights Reserved</p>
 </footer>
 
 </body>
-  </html>
-  
+    </html>
+    
